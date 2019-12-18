@@ -3,7 +3,7 @@
     <h1>{{ message }}</h1>
     <h1>{{ post.id }}</h1>
     <h1>{{ post.title }}</h1>
-    <h1>{{ post.author }}</h1>
+    <h1>{{ post.body }}</h1>
     <img v-bind:src="posts.image_url">
   </div>
 </template>

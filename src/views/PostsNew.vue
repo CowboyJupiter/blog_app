@@ -8,8 +8,12 @@
           <input type="text" class="form-control" v-model="title">
         </div>
         <div class="form-group">
-          <label>Author:</label>
-          <input type="text" class="form-control" v-model="author">
+          <label>Body:</label>
+          <input type="text" class="form-control" v-model="Body">
+        </div>
+        <div class="form-group">
+          <label>Image:</label>
+          <input type="text" class="form-control" v-model="Image">
         </div>
         <input type="submit" class="btn btn-primary" value="Submit">
       </form>
@@ -23,14 +27,17 @@ export default {
   data: function() {
     return {
       title: "Enter Title",
-      author: "Enter Author"
+      body: "Enter Body",
+      image: "Enter Image URL"
     };
   },
   methods: {
     submit: function() {
       var params = {
         title: this.title,
-        author: this.title
+        body: this.body,
+        image: this.image
+
       };
       axios
         .post("/api/posts", params)

@@ -36,7 +36,8 @@ export default {
     submit: function() {
       var params = {
         title: this.post.title,
-        author: this.post.author
+        body: this.post.body,
+        image: this.post.image
       };
       axios
         .patch(`/api/posts/${this.$route.params.id}`, params)
